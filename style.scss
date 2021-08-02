@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+$FontMont:'Montserrat',sans-serif;
+$Font-size: 15px;
+$FW-400:400;
+$FW-700:700;
+$Box-Shadow:0px 8px 10px rgba(0 0 0 / 0.1);
+$Light: #e6e6ee;
+$Light-Gray: #acadb3;
+$Grayish: #696b7e;
+$Dark-Grayish-Blue: #4e4f5c;
+$btncolor:#67697c;
+$White:#ffffff;
+
+*{
+    box-sizing: border-box;
+}
+.container{
+    max-width: 1052px ;
+    margin: 0 auto;
+}
+body{
+    margin: 0;
+    font-weight: $FW-400;
+    font-family: $FontMont;
+    font-size: $Font-size;
+    color: $Grayish;
+    background-color: $Light;
+    padding-bottom: 100px;
+}
+.header{
+    padding: 50px 20px 0 20px;
+    text-align: center;
+    &__title{
+        font-size: 32px;
+        font-weight: $FW-700;
+        margin: 20px 0;
+    }
+    &__text{
+        font-weight: $FW-700;
+        display: inline-block;
+        color:$Light-Gray;
+        font-size: $Font-size;
+        margin: 15px 0;
+    }
+    &__slider{
+        vertical-align: middle;
+        background: linear-gradient( #494e9e, #4a52f8);
+        position: relative;
+        display: inline-block;
+        width: 58px;
+        height: 32px;
+        margin: 18px 23px;
+        border-radius: 34px;
+        &:after{
+            position: absolute;
+            content: ' ';
+            height: 24px;
+            width: 24px;
+            right: 4px;
+            bottom: 4px;
+            background-color: $White;
+            border-radius:50% ;
+        }
+    }
+}
+.section{
+    padding: 60px 0 0;
+}
+.row {
+    display: flex;
+}
+@mixin pcard($big: false) {
+    width: (100% / 3);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    
+    @if $big {
+        transform: scaleY(1.2);
+        background: linear-gradient( #494e9e, #4a52f8);
+        color: $White;
+        .button {
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            background-color:$White;
+            color: $btncolor;
+            border-radius: 8px;
+            font-size:12px ;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+    }
+    @else {
+        border: transparent;
+        background-color: #fff;
+        box-shadow: $Box-Shadow;
+        &__title {
+            font-size:18px;
+            font-weight: $FW-700;
+        }
+        &__card {
+            list-style-type: none;
+            margin: 24px 0 32px;
+            padding: 0;
+            font-weight: 700;
+            letter-spacing: 0px;
+            font-size: 15px;
+            li {
+                padding: 17px 0;
+                border-top: 0.5px solid #dfdbdbcc;
+                &:last-child {
+                    border-bottom: 1px solid #dfdbdbcc;
+                }
+            }
+        }
+        .button{
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            background: linear-gradient(#494e9e, #4a52f8);
+            color: $White;
+            border-radius: 8px ;
+            font-weight: 700;
+            letter-spacing: 1px;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+
+}
+.price{
+    &__title {
+        font-size: 72px;
+        margin: 0;
+        font-weight: 700;
+        span{
+            font-size: 39px;
+            margin-right: 8px;
+        }
+    }
+}
+
+.main{
+    @include pcard;
+    &_big {
+        @include pcard(true);
+    }
+}

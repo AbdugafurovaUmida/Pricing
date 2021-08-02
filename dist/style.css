@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1052px;
+  margin: 0 auto;
+}
+
+body {
+  margin: 0;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  color: #696b7e;
+  background-color: #e6e6ee;
+  padding-bottom: 100px;
+}
+
+.header {
+  padding: 50px 20px 0 20px;
+  text-align: center;
+}
+.header__title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+.header__text {
+  font-weight: 700;
+  display: inline-block;
+  color: #acadb3;
+  font-size: 15px;
+  margin: 15px 0;
+}
+.header__slider {
+  vertical-align: middle;
+  background: linear-gradient(#494e9e, #4a52f8);
+  position: relative;
+  display: inline-block;
+  width: 58px;
+  height: 32px;
+  margin: 18px 23px;
+  border-radius: 34px;
+}
+.header__slider:after {
+  position: absolute;
+  content: " ";
+  height: 24px;
+  width: 24px;
+  right: 4px;
+  bottom: 4px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.section {
+  padding: 60px 0 0;
+}
+
+.row {
+  display: flex;
+}
+
+.price__title {
+  font-size: 72px;
+  margin: 0;
+  font-weight: 700;
+}
+.price__title span {
+  font-size: 39px;
+  margin-right: 8px;
+}
+
+.main {
+  width: 33.3333333333%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #fff;
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+}
+.main__title {
+  font-size: 18px;
+  font-weight: 700;
+}
+.main__card {
+  list-style-type: none;
+  margin: 24px 0 32px;
+  padding: 0;
+  font-weight: 700;
+  letter-spacing: 0px;
+  font-size: 15px;
+}
+.main__card li {
+  padding: 17px 0;
+  border-top: 0.5px solid #dfdbdbcc;
+}
+.main__card li:last-child {
+  border-bottom: 1px solid #dfdbdbcc;
+}
+.main .button {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background: linear-gradient(#494e9e, #4a52f8);
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+.main_big {
+  width: 33.3333333333%;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  transform: scaleY(1.2);
+  background: linear-gradient(#494e9e, #4a52f8);
+  color: #ffffff;
+}
+.main_big .button {
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  background-color: #ffffff;
+  color: #67697c;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
